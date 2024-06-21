@@ -3,7 +3,8 @@
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden; /* Prevent body from scrolling */
+  overflow: hidden;
+  /* Prevent body from scrolling */
 }
 
 .app-container {
@@ -14,8 +15,8 @@ body {
 
 .content-container {
   flex: 1;
-  overflow-y: auto; /* Make this container scrollable */
-  padding-top: 6rem; /* Adjust based on the height of your navbar */
+  overflow-y: auto;
+  /* Make this container scrollable */
 }
 
 h1 {
@@ -28,7 +29,8 @@ h1 {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  border-bottom: 2px solid black; /* Add a black line at the bottom of the navbar */
+  border-bottom: 2px solid black;
+  /* Add a black line at the bottom of the navbar */
 }
 
 .navbar-brand img {
@@ -42,7 +44,8 @@ h1 {
 }
 
 .nav-link-custom {
-  font-size: 1.5rem; /* Big and prominent font size */
+  font-size: 1.5rem;
+  /* Big and prominent font size */
   color: black;
   padding: 0.5rem 1rem;
   text-transform: uppercase;
@@ -50,5 +53,6 @@ h1 {
 }
 
 .nav-link-custom:hover {
-  color: #ddd; /* Subtle hover effect */
+  color: #ddd;
+  /* Subtle hover effect */
 }

@@ -1,0 +1,100 @@
+.resume-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-color: #001f3f;
+    /* Ensure it matches the background */
+    overflow: hidden;
+    /* Hide overflow to ensure smooth sliding */
+}
+
+.content-wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.resume-content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+
+.active {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s;
+    z-index: 1;
+    /* Ensure arrows are above other elements */
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.arrow.left {
+    left: 10%;
+}
+
+.arrow.right {
+    right: 10%;
+}
+
+.arrow svg {
+    color: black;
+}
+
+.page-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+.page-title {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+}
+
+.page-indicators {
+    display: flex;
+    justify-content: center;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 5px;
+    background-color: white;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.active {
+    background-color: black;
+}
