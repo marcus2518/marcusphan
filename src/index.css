@@ -1,0 +1,54 @@
+/* src/index.css */
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden; /* Prevent body from scrolling */
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.content-container {
+  flex: 1;
+  overflow-y: auto; /* Make this container scrollable */
+  padding-top: 6rem; /* Adjust based on the height of your navbar */
+}
+
+h1 {
+  margin-top: 0;
+}
+
+/* Custom styles for the navbar */
+.custom-navbar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  border-bottom: 2px solid black; /* Add a black line at the bottom of the navbar */
+}
+
+.navbar-brand img {
+  margin-bottom: 1rem;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link-custom {
+  font-size: 1.5rem; /* Big and prominent font size */
+  color: black;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.nav-link-custom:hover {
+  color: #ddd; /* Subtle hover effect */
+}
