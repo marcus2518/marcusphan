@@ -1,0 +1,16 @@
+.responsibilities-container {
+    padding: 10px;
+}
+
+.responsibilities-container h4 {
+    margin-bottom: 10px;
+}
+
+.responsibilities-container ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.responsibilities-container li {
+    margin: 5px 0;
+}

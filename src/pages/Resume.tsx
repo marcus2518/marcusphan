@@ -6,17 +6,17 @@ import "./Resume.css"; // Add a CSS file for styling
 
 interface Page {
   title: string;
-  content: string;
+  content: React.ReactNode;
 }
 
-const Resume: React.FC = () => {
+interface ResumeProps {
+  pages: Page[];
+  style?: React.CSSProperties;
+}
+
+const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
-  const pages: Page[] = [
-    { title: "Page 1 Title", content: "Page 1 Content" },
-    { title: "Page 2 Title", content: "Page 2 Content" },
-    { title: "Page 3 Title", content: "Page 3 Content" },
-  ]; // Add your resume content here
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "ArrowLeft" && currentPage > 0) {
@@ -41,6 +41,7 @@ const Resume: React.FC = () => {
   };
 
   const transitions = useTransition(currentPage, {
+    key: currentPage,
     from: {
       opacity: 0,
       transform: `translateX(${direction === "right" ? 100 : -100}%)`,
@@ -57,7 +58,7 @@ const Resume: React.FC = () => {
   });
 
   return (
-    <div className="resume-container">
+    <div className="resume-container" style={style}>
       <div
         className="arrow left"
         onClick={() => navigateToPage(currentPage - 1, "left")}
@@ -65,9 +66,9 @@ const Resume: React.FC = () => {
         <FontAwesomeIcon icon={faArrowLeft} />
       </div>
       <div className="content-wrapper">
-        {transitions((style, index) => (
-          <animated.div style={style} className="resume-content">
-            {pages[index].content}
+        {transitions((style, item) => (
+          <animated.div key={item} style={{ ...style, position: 'absolute', top: 0 }} className="resume-content">
+            {pages[item].content}
           </animated.div>
         ))}
       </div>
