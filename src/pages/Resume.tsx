@@ -11,7 +11,7 @@ interface Page {
 
 interface ResumeProps {
   pages: Page[];
-  style?: React.CSSProperties;
+  style?: any;
 }
 
 const Resume: React.FC<ResumeProps> = ({ pages, style }) => {

@@ -10,7 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import "./App.css"; // Ensure to create and use a custom CSS file for styling
 import Resume from "./pages/Resume";
-import { useTransition, a } from "react-spring";
+import { useTransition } from "react-spring";
 import Skills from "./components/cv/Skills";
 import Education from "./components/cv/Education";
 import JobExperience from "./components/cv/JobExperience";
