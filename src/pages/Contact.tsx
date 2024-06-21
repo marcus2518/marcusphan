@@ -2,7 +2,7 @@
 import React from "react";
 
 const Contact: React.FC = () => {
-  return <div>bonjour mademoiselle</div>;
+  return <div>Jimmy</div>;
 };
 
 export default Contact;

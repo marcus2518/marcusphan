@@ -2,7 +2,12 @@ import React from "react";
 import { Navbar } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import CustomButton from "./CustomButton";
-import { faHome, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import {
+  faHome,
+  faUser,
+  faEnvelope,
+  faFileAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import "./CustomNavbar.css";
 
 const CustomNavbar: React.FC = () => {
@@ -31,6 +36,11 @@ const CustomNavbar: React.FC = () => {
           icon={faUser}
           text="About"
           onClick={() => navigate("/about")}
+        />
+        <CustomButton
+          icon={faFileAlt}
+          text="Resume"
+          onClick={() => navigate("/resume")}
         />
         <CustomButton
           icon={faEnvelope}
