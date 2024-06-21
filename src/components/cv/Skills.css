@@ -1,0 +1,16 @@
+.skills-container {
+    padding: 20px;
+}
+
+.skills-container h3 {
+    margin-bottom: 10px;
+}
+
+.skills-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills-container li {
+    margin: 5px 0;
+}
