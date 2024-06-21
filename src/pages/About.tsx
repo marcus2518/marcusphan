@@ -2,13 +2,7 @@
 import React from "react";
 
 const About: React.FC = () => {
-  return (
-    <div>
-      <h1>About Page</h1>
-      <p>Welcome to the About Page.</p>
-      <p>Content goes here...</p>
-    </div>
-  );
+  return <div>bonjour mademoiselle</div>;
 };
 
 export default About;
