@@ -17,6 +17,7 @@ interface ResumeProps {
 const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
   const [currentPage, setCurrentPage] = useState<number>(0);
   const [direction, setDirection] = useState<"left" | "right">("right");
+  const [initial, setInitial] = useState<boolean>(true);
 
   const handleKeyDown = (e: KeyboardEvent) => {
     if (e.key === "ArrowLeft" && currentPage > 0) {
@@ -33,6 +34,10 @@ const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
     };
   }, [currentPage]);
 
+  useEffect(() => {
+    setInitial(false);
+  }, []);
+
   const navigateToPage = (page: number, dir: "left" | "right") => {
     if (page >= 0 && page < pages.length) {
       setDirection(dir);
@@ -42,14 +47,13 @@ const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
 
   const transitions = useTransition(currentPage, {
     key: currentPage,
-    from: {
-      opacity: 0,
-      transform: `translateX(${direction === "right" ? 100 : -100}%)`,
-    },
-    enter: {
-      opacity: 1,
-      transform: "translateX(0%)",
-    },
+    from: initial
+      ? { opacity: 1, transform: "translateX(0%)" } // No animation on initial render
+      : {
+          opacity: 0,
+          transform: `translateX(${direction === "right" ? 100 : -100}%)`,
+        },
+    enter: { opacity: 1, transform: "translateX(0%)" },
     leave: {
       opacity: 0,
       transform: `translateX(${direction === "right" ? -100 : 100}%)`,
@@ -67,7 +71,11 @@ const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
       </div>
       <div className="content-wrapper">
         {transitions((style, item) => (
-          <animated.div key={item} style={{ ...style, position: 'absolute', top: 0 }} className="resume-content">
+          <animated.div
+            key={item}
+            style={{ ...style, position: "absolute", top: 0 }}
+            className="resume-content"
+          >
             {pages[item].content}
           </animated.div>
         ))}
