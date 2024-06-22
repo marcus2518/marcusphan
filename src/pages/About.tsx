@@ -43,9 +43,9 @@ const About: React.FC<AboutProps> = ({ technologies, motivation }) => {
             <p className="motivation-text">{items[index].description}</p>
           ) : (
             <Technology
-              logo={items[index].logo}
+              logo={(items[index] as Technology).logo}
               description={items[index].description}
-              backgroundImage={items[index].backgroundImage}
+              backgroundImage={(items[index] as Technology).backgroundImage}
             />
           )}
         </animated.div>
