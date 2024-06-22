@@ -57,7 +57,7 @@
   z-index: 1; /* Place it below the content */
   background-size: cover;
   background-position: center;
-  opacity: 0.2; /* Low opacity for the background image */
+  opacity: 0.4; /* Low opacity for the background image */
 }
 
 .resume-section-overlay {

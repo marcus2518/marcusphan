@@ -1,3 +1,4 @@
+// src/components/CustomNavbar.tsx
 import React from "react";
 import { Navbar } from "react-bootstrap";
 import { useNavigate, useLocation } from "react-router-dom";
@@ -9,6 +10,7 @@ import {
   faFileAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import "./CustomNavbar.css";
+import profileData from "../data/profile.json";
 
 const CustomNavbar: React.FC = () => {
   const navigate = useNavigate();
@@ -37,6 +39,10 @@ const CustomNavbar: React.FC = () => {
           alt="Logo"
           style={{ borderRadius: "50%" }}
         />
+        <div className="profile-info">
+          <div className="profile-name">{profileData.name}</div>
+          <div className="profile-title">{profileData.title}</div>
+        </div>
       </Navbar.Brand>
       <div className="d-flex flex-column align-items-center w-100">
         {buttons.map((button, index) => (
