@@ -6,17 +6,4 @@
       "startDate": "2020",
       "endDate": "2024"
     },
-    {
-      "school": "École Polytechnique de Montréal",
-      "subject": "Software engineering",
-      "startDate": "2016",
-      "endDate": "2018"
-    },
-    {
-      "school": "Collège de Maisonneuve",
-      "subject": "Computer science and mathematics",
-      "startDate": "2014",
-      "endDate": "2016"
-    }
-  ]
 }

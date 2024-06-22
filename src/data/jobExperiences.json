@@ -14,7 +14,7 @@
       ]
     },
     {
-      "title": "Web Development Intern (front-end)",
+      "title": "Web Development Intern (Front-end)",
       "company": "Triton Digital",
       "startDate": "January 2023",
       "endDate": "September 2023",
@@ -36,13 +36,13 @@
       ]
     },
     {
-      "title": "Web Development Intern (full-stack)",
+      "title": "Web Development Intern (Full-stack)",
       "company": "MHICC",
       "startDate": "September 2021",
       "endDate": "April 2022",
       "responsibilities": [
         "Propose, design, and implement user interfaces using ReactJS and TypeScript",
-        "Implement backend responses to HTTP requests sent using axios library from the frontend with ExpressJS, while retrieving data from a Google Firestore database as needed",
+        "Implement backend responses to HTTP requests sent using the Axios library from the frontend with ExpressJS, while retrieving data from a Google Firestore database as needed",
         "Wisely define the data structures used in the Google Firestore database",
         "Implement cloud functions as needed",
         "Assist the quality assurance team in producing new documentation related to a newly developed feature, updating existing documentation, and running tests as necessary"
