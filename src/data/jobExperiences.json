@@ -1,0 +1,59 @@
+{
+  "jobExperiences": [
+    {
+      "title": "Teaching Assistant (LOG430 Software Architecture)",
+      "company": "École de technologie supérieure",
+      "startDate": "May 2024",
+      "endDate": "",
+      "responsibilities": [
+        "Assist students in designing a software architecture",
+        "Discuss common software architecture tactics to improve system availability and performance",
+        "Discuss methods to implement said tactics",
+        "Containerize microservices using Docker",
+        "Grade lab reports pertaining to the software architecture of a particular system"
+      ]
+    },
+    {
+      "title": "Web Development Intern (front-end)",
+      "company": "Triton Digital",
+      "startDate": "January 2023",
+      "endDate": "September 2023",
+      "responsibilities": [
+        "Design and implement user interfaces using ReactJS and TypeScript",
+        "Cooperate with various company teams to maintain a uniform user interface across products",
+        "Interact with internal APIs to meet company needs",
+        "Use the ElasticSearch API to implement logging functions"
+      ]
+    },
+    {
+      "title": "Teaching Assistant (GTI100 Programming)",
+      "company": "École de technologie supérieure",
+      "startDate": "June 2023",
+      "endDate": "August 2023",
+      "responsibilities": [
+        "Assist students in their coding laboratories",
+        "Grade assignments"
+      ]
+    },
+    {
+      "title": "Web Development Intern (full-stack)",
+      "company": "MHICC",
+      "startDate": "September 2021",
+      "endDate": "April 2022",
+      "responsibilities": [
+        "Propose, design, and implement user interfaces using ReactJS and TypeScript",
+        "Implement backend responses to HTTP requests sent using axios library from the frontend with ExpressJS, while retrieving data from a Google Firestore database as needed",
+        "Wisely define the data structures used in the Google Firestore database",
+        "Implement cloud functions as needed",
+        "Assist the quality assurance team in producing new documentation related to a newly developed feature, updating existing documentation, and running tests as necessary"
+      ]
+    },
+    {
+      "title": "Customer Service",
+      "company": "TELEPERFORMANCE",
+      "startDate": "May 2019",
+      "endDate": "August 2019",
+      "responsibilities": ["Handle any concerns pertaining to car rentals"]
+    }
+  ]
+}

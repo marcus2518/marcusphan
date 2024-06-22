@@ -1,0 +1,24 @@
+{
+  "technologies": [
+    {
+      "logo": "/react.png",
+      "description": "React: Used to build the frontend of the website",
+      "backgroundImage": "/react.png"
+    },
+    {
+      "logo": "/docker.png",
+      "description": "Docker: Used to containerize the website",
+      "backgroundImage": "/docker.png"
+    },
+    {
+      "logo": "/gcp.svg",
+      "description": "Google Cloud Platforms: Used to deploy the website and to integrate a CI/CD pipeline",
+      "backgroundImage": "/gcp.svg"
+    },
+    {
+      "logo": "/git.png",
+      "description": "Git: Used to manage versioning and to integrate the CI/CD pipeline",
+      "backgroundImage": "/git.png"
+    }
+  ]
+}
