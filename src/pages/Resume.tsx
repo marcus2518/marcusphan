@@ -7,6 +7,7 @@ import "./Resume.css"; // Add a CSS file for styling
 interface Page {
   title: string;
   content: React.ReactNode;
+  backgroundImage: string;
 }
 
 interface ResumeProps {
@@ -63,22 +64,31 @@ const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
 
   return (
     <animated.div className="resume-container" style={style}>
+      {transitions((style, item) => (
+        <animated.div
+          key={item}
+          style={{
+            ...style,
+            position: "absolute",
+            top: 0,
+            width: "100%",
+            height: "100%",
+          }}
+          className="resume-page"
+        >
+          <div
+            className="resume-section-background"
+            style={{ backgroundImage: `url(${pages[item].backgroundImage})` }}
+          />
+          <div className="resume-section-overlay" />
+          <div className="resume-content">{pages[item].content}</div>
+        </animated.div>
+      ))}
       <div
         className="arrow left"
         onClick={() => navigateToPage(currentPage - 1, "left")}
       >
         <FontAwesomeIcon icon={faArrowLeft} />
-      </div>
-      <div className="content-wrapper">
-        {transitions((style, item) => (
-          <animated.div
-            key={item}
-            style={{ ...style, position: "absolute", top: 0 }}
-            className="resume-content"
-          >
-            {pages[item].content}
-          </animated.div>
-        ))}
       </div>
       <div
         className="arrow right"

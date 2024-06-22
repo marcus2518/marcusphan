@@ -109,7 +109,11 @@ const contactInfo = {
 };
 
 const pages = [
-  { title: "Skills", content: <Skills skills={skills} /> },
+  {
+    title: "Skills",
+    content: <Skills skills={skills} />,
+    backgroundImage: "/programming.jpg",
+  },
   {
     title: "Education",
     content: (
@@ -126,6 +130,7 @@ const pages = [
         ))}
       </div>
     ),
+    backgroundImage: "/ets_montreal_2014.jpg",
   },
   {
     title: "Experience",
@@ -143,6 +148,7 @@ const pages = [
         ))}
       </div>
     ),
+    backgroundImage: "/react-node-gcp-gke.png",
   },
 ];
 
