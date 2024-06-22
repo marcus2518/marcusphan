@@ -58,7 +58,7 @@ const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
   });
 
   return (
-    <div className="resume-container" style={style}>
+    <animated.div className="resume-container" style={style}>
       <div
         className="arrow left"
         onClick={() => navigateToPage(currentPage - 1, "left")}
@@ -89,7 +89,7 @@ const Resume: React.FC<ResumeProps> = ({ pages, style }) => {
           ))}
         </div>
       </div>
-    </div>
+    </animated.div>
   );
 };
 

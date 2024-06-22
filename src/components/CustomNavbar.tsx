@@ -1,6 +1,6 @@
 import React from "react";
 import { Navbar } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import CustomButton from "./CustomButton";
 import {
   faHome,
@@ -12,6 +12,14 @@ import "./CustomNavbar.css";
 
 const CustomNavbar: React.FC = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+
+  const buttons = [
+    { icon: faHome, text: "Home", path: "/" },
+    { icon: faUser, text: "About", path: "/about" },
+    { icon: faFileAlt, text: "Resume", path: "/resume" },
+    { icon: faEnvelope, text: "Contact", path: "/contact" },
+  ];
 
   return (
     <Navbar
@@ -31,22 +39,16 @@ const CustomNavbar: React.FC = () => {
         />
       </Navbar.Brand>
       <div className="d-flex flex-column align-items-center w-100">
-        <CustomButton icon={faHome} text="Home" onClick={() => navigate("/")} />
-        <CustomButton
-          icon={faUser}
-          text="About"
-          onClick={() => navigate("/about")}
-        />
-        <CustomButton
-          icon={faFileAlt}
-          text="Resume"
-          onClick={() => navigate("/resume")}
-        />
-        <CustomButton
-          icon={faEnvelope}
-          text="Contact"
-          onClick={() => navigate("/contact")}
-        />
+        {buttons.map((button, index) => (
+          <CustomButton
+            key={index}
+            icon={button.icon}
+            text={button.text}
+            onClick={() => navigate(button.path)}
+            className={location.pathname === button.path ? "active" : ""}
+            disabled={location.pathname === button.path}
+          />
+        ))}
       </div>
     </Navbar>
   );

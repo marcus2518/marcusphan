@@ -132,6 +132,7 @@ const App: React.FC = () => {
     from: { opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
+    config: { duration: 500 }
   });
   return (
     <div className="app-container">

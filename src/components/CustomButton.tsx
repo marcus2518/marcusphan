@@ -6,11 +6,17 @@ interface CustomButtonProps {
   icon: any;
   text: string;
   onClick?: () => void;
+  className?: string;
+  disabled?: boolean;
 }
 
-const CustomButton: React.FC<CustomButtonProps> = ({ icon, text, onClick }) => {
+const CustomButton: React.FC<CustomButtonProps> = ({ icon, text, onClick, className, disabled }) => {
   return (
-    <button className="custom-button" onClick={onClick}>
+    <button
+      className={`custom-button ${className}`}
+      onClick={onClick}
+      disabled={disabled}
+    >
       <FontAwesomeIcon icon={icon} className="custom-button-icon" />
       <span className="custom-button-text">{text}</span>
     </button>
