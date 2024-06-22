@@ -19,6 +19,26 @@
       "logo": "/git.png",
       "description": "Git: Used to manage versioning and to integrate the CI/CD pipeline",
       "backgroundImage": "/git.png"
+    },
+    {
+      "logo": "/nodejs.svg",
+      "description": "Node.js: Used as the runtime environment",
+      "backgroundImage": "/nodejs.svg"
+    },
+    {
+      "logo": "/typescript.png",
+      "description": "TypeScript: Used to write type-safe JavaScript for better code quality",
+      "backgroundImage": "/typescript.png"
+    },
+    {
+      "logo": "/nginx.svg",
+      "description": "Nginx: Used to serve the application and handle reverse proxying",
+      "backgroundImage": "/nginx.svg"
+    },
+    {
+      "logo": "/npm.svg",
+      "description": "npm: Used for managing packages and dependencies",
+      "backgroundImage": "/npm.svg"
     }
   ]
 }
